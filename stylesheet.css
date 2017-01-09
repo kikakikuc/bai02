@@ -13,6 +13,14 @@ body {
   font-family: OpenSans-Bold;
   src: url(font/OpenSans-Bold.ttf);
 }
+@font-face {
+  font-family: OpenSans-Semibold;
+  src: url(font/OpenSans-Semibold.ttf);
+}
+@font-face {
+  font-family: OpenSans-Italic;
+  src: url(font/OpenSans-Italic.ttf);
+}
 .start {
   background-color: black;
   padding: 40px 0;
@@ -65,4 +73,44 @@ body {
 }
 .start #welcome a {
   color: white;
+}
+section {
+  padding: 100px 0;
+  color: #636363;
+}
+section article p {
+  font-size: 20px;
+}
+section article h1 {
+  color: #3f3f3f;
+  font-family: OpenSans-Light;
+  padding: 0 15px;
+}
+section article hr {
+  background-color: #fcac45;
+  width: 100px;
+  height: 5px;
+  border: none;
+  margin-left: 0;
+}
+section article h4 {
+  font-family: OpenSans-Light;
+}
+section article ul {
+  padding: 40px 0;
+}
+section article ul li {
+  font-family: OpenSans-Semibold;
+  font-size: 18px;
+}
+section article ul li span {
+  font-family: OpenSans-Italic;
+  font-size: 16px;
+}
+section article button {
+  background-color: white;
+  font-family: OpenSans-Semibold;
+  font-size: 12px;
+  padding: 15px;
+  border: 1px solid #3f3f3f;
 }
