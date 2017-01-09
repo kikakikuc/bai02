@@ -21,6 +21,15 @@ body {
   font-family: OpenSans-Italic;
   src: url(font/OpenSans-Italic.ttf);
 }
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(font/OpenSans-Regular.ttf);
+}
+hr {
+  background-color: #fcac45;
+  height: 5px;
+  border: none;
+}
 .start {
   background-color: black;
   padding: 40px 0;
@@ -40,7 +49,6 @@ body {
   width: 30px;
   margin-right: 0;
   opacity: 0;
-  background-color: #fcac45;
 }
 .start .nav li a:focus,
 .start .nav li a:hover {
@@ -77,6 +85,14 @@ body {
 section {
   padding: 100px 0;
   color: #636363;
+  text-align: center;
+}
+section h {
+  font-size: 44px;
+  font-family: OpenSans-Light;
+}
+section h span {
+  font-family: OpenSans-Semibold;
 }
 section article p {
   font-size: 20px;
@@ -113,4 +129,107 @@ section article button {
   font-size: 12px;
   padding: 15px;
   border: 1px solid #3f3f3f;
+}
+.team {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+.team .carousel-indicators li {
+  margin-bottom: -50px;
+}
+.team .carousel-indicators li:focus,
+.team .carousel-indicators li:hover,
+.team .carousel-indicators li:active {
+  background-color: #fcac45;
+  border-color: #fcac45;
+  cursor: pointer;
+}
+.team h {
+  font-size: 44px;
+  font-family: OpenSans-Light;
+}
+.team h span {
+  font-family: OpenSans-Semibold;
+}
+.team figure {
+  padding: 70px 0;
+}
+.team figure img {
+  background-color: #d7d7d7;
+}
+.team figure p {
+  padding: 30px 0;
+}
+.services article {
+  padding: 100px 0 0 0;
+}
+.services article h3 {
+  font-family: OpenSans-Semibold;
+}
+.services article .fa-circle-thin {
+  color: #fcac45;
+}
+.services article h5 {
+  padding: 10px;
+}
+.testimonials h4 {
+  font-family: OpenSans-Semibold;
+}
+.testimonials h4 span {
+  font-family: OpenSans-Light;
+}
+.testimonials h4:last-child {
+  padding: 50px 0;
+}
+.portofolio {
+  padding: 30px 120px;
+}
+.contact {
+  padding: 80px 300px;
+}
+.contact p {
+  font-family: OpenSans-Light;
+}
+.contact form {
+  padding: 70px 0;
+  text-align: right;
+}
+.contact form .form-group {
+  text-align: left;
+  font-family: OpenSans-Light;
+}
+.contact form button {
+  background-color: #fcac45;
+  padding: 10px 55px;
+  border: none;
+}
+.contact form button a {
+  color: white;
+}
+.contact form button a:focus,
+.contact form button a:hover {
+  text-decoration: none;
+}
+.contact form button:focus,
+.contact form button:hover {
+  background-color: black;
+}
+footer {
+  background-color: black;
+  font-family: OpenSans-Bold;
+  color: #b2b2b2;
+  padding: 40px;
+}
+footer .social li {
+  display: inline;
+  text-decoration: none;
+  padding: 5px;
+}
+footer .social li .fa {
+  color: #b2b2b2;
+}
+footer .social li .fa:focus,
+footer .social li .fa:hover {
+  color: #fcac45;
 }
