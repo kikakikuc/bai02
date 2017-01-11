@@ -25,10 +25,17 @@ body {
   font-family: OpenSans-Regular;
   src: url(font/OpenSans-Regular.ttf);
 }
-hr {
+.separator-box {
+  padding: 25px 0;
+}
+.separator-box .short-separator {
+  width: 60px;
+}
+.separator {
   background-color: #fcac45;
-  height: 5px;
-  border: none;
+  height: 4px;
+  margin: 0 auto;
+  width: 100px;
 }
 .start {
   background-color: black;
@@ -38,25 +45,30 @@ hr {
   font-family: Lato-Bold;
   color: white;
 }
+.start .nav .separator {
+  width: 50%;
+  margin-right: 10%;
+  opacity: 0;
+}
 .start .nav li {
   font-family: Lato-Bold;
   font-size: 14px;
 }
+.start .nav li .separator {
+  opacity: 0;
+}
+.start .nav li:focus .separator,
+.start .nav li:hover .separator {
+  opacity: 1;
+}
 .start .nav li a {
   color: white;
-}
-.start .nav li a hr {
-  width: 30px;
-  margin-right: 0;
-  opacity: 0;
 }
 .start .nav li a:focus,
 .start .nav li a:hover {
   background-color: black;
-  color: #fcac45;
 }
-.start .nav li a:focus hr,
-.start .nav li a:hover hr {
+.start .nav .active .separator {
   opacity: 1;
 }
 .start #welcome {
@@ -83,7 +95,7 @@ hr {
   color: white;
 }
 section {
-  padding: 100px 0;
+  padding: 90px 0;
   color: #636363;
   text-align: center;
 }
@@ -94,19 +106,22 @@ section h {
 section h span {
   font-family: OpenSans-Semibold;
 }
+section p {
+  padding: 30px 0;
+}
 section article p {
   font-size: 20px;
+  font-family: OpenSans-Light;
+}
+section article #about-us {
+  padding: 0;
 }
 section article h1 {
   color: #3f3f3f;
   font-family: OpenSans-Light;
   padding: 0 15px;
 }
-section article hr {
-  background-color: #fcac45;
-  width: 100px;
-  height: 5px;
-  border: none;
+section article .separator {
   margin-left: 0;
 }
 section article h4 {
@@ -128,108 +143,148 @@ section article button {
   font-family: OpenSans-Semibold;
   font-size: 12px;
   padding: 15px;
-  border: 1px solid #3f3f3f;
+  border: 1px solid #5a5a5a;
 }
-.team {
+section article button:focus,
+section article button:hover {
+  border-color: #fcac45;
+  color: #fcac45;
+}
+.blackCarousel {
   background-color: black;
-  text-align: center;
   color: white;
 }
-.team .carousel-indicators li {
+.blackCarousel .carousel-indicators li {
   margin-bottom: -50px;
 }
-.team .carousel-indicators li:focus,
-.team .carousel-indicators li:hover,
-.team .carousel-indicators li:active {
+.blackCarousel .carousel-indicators li:focus,
+.blackCarousel .carousel-indicators li:hover,
+.blackCarousel .carousel-indicators li:active {
   background-color: #fcac45;
   border-color: #fcac45;
   cursor: pointer;
 }
-.team h {
+.blackCarousel h {
   font-size: 44px;
   font-family: OpenSans-Light;
+  padding-bottom: 70px;
 }
-.team h span {
+.blackCarousel h span {
   font-family: OpenSans-Semibold;
 }
-.team figure {
+.blackCarousel figure {
   padding: 70px 0;
 }
-.team figure img {
+.blackCarousel figure img {
   background-color: #d7d7d7;
 }
-.team figure p {
+.blackCarousel figure p {
   padding: 30px 0;
 }
-.services article {
-  padding: 100px 0 0 0;
+#services article {
+  padding: 70px 0 0 0;
 }
-.services article h3 {
+#services article h3 {
   font-family: OpenSans-Semibold;
 }
-.services article .fa-circle-thin {
+#services article .fa-circle-thin {
   color: #fcac45;
 }
-.services article h5 {
+#services article h5 {
   padding: 10px;
 }
-.testimonials h4 {
+#testimonials #tesCarousel .item {
+  margin-top: 80px;
+}
+#testimonials #tesCarousel .item h4 {
   font-family: OpenSans-Semibold;
 }
-.testimonials h4 span {
+#testimonials #tesCarousel .item h4 span {
   font-family: OpenSans-Light;
 }
-.testimonials h4:last-child {
-  padding: 50px 0;
+#testimonials #tesCarousel .item h4:last-child {
+  padding: 35px 0;
 }
-.portofolio {
-  padding: 30px 120px;
+#portfolio {
+  padding: 70px 40px;
 }
-.contact {
-  padding: 80px 300px;
+#portfolio .active {
+  color: black;
 }
-.contact p {
-  font-family: OpenSans-Light;
+#portfolio .portfolio-nav {
+  margin: 25px 0;
 }
-.contact form {
-  padding: 70px 0;
+#portfolio li:hover {
+  cursor: pointer;
+  color: orange;
+}
+#portfolio figure {
+  width: 270px;
+  height: 245px;
+  position: relative;
+}
+#portfolio figure figcaption {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 270px;
+  height: 245px;
+}
+#portfolio figure figcaption:focus,
+#portfolio figure figcaption:hover {
+  color: white;
+  opacity: 1;
+}
+#portfolio figure figcaption h4 {
+  padding-top: 20%;
+  font-family: OpenSans-Semibold;
+}
+#contact {
+  padding: 90px 300px;
+}
+#contact p {
+  font-family: OpenSans-Italic;
+}
+#contact form {
+  padding-top: 50px;
   text-align: right;
 }
-.contact form .form-group {
+#contact form .form-group {
   text-align: left;
   font-family: OpenSans-Light;
 }
-.contact form button {
+#contact form button {
   background-color: #fcac45;
   padding: 10px 55px;
-  border: none;
-}
-.contact form button a {
+  border: solid 1px #fcac45;
+  margin: 30px 0;
   color: white;
 }
-.contact form button a:focus,
-.contact form button a:hover {
-  text-decoration: none;
-}
-.contact form button:focus,
-.contact form button:hover {
-  background-color: black;
+#contact form button:focus,
+#contact form button:hover {
+  background-color: white;
+  color: #fcac45;
+  border-color: #fcac45;
 }
 footer {
   background-color: black;
   font-family: OpenSans-Bold;
   color: #b2b2b2;
-  padding: 40px;
+  padding: 27px 0 15px 30px;
 }
-footer .social li {
-  display: inline;
-  text-decoration: none;
-  padding: 5px;
+footer p {
+  font-family: OpenSans-Light;
 }
-footer .social li .fa {
+footer p strong {
+  color: white;
+}
+footer ul li {
+  padding: 0 5px;
+}
+footer ul li .fa {
   color: #b2b2b2;
 }
-footer .social li .fa:focus,
-footer .social li .fa:hover {
+footer ul li .fa:focus,
+footer ul li .fa:hover {
   color: #fcac45;
 }

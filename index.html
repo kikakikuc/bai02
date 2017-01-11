@@ -9,16 +9,19 @@
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- isotope -->
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Font awesome-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- CSS-->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
-	<!--Start-->
+<!--Start-->
 	<div class="start">
 		<div class="container">
 			<div class="navbar-header">
@@ -30,13 +33,13 @@
 
 			<nav class="navbar">
 				<div class="collapse navbar-collapse" id="collapseNav">
-					<ul class="nav navbar-nav navbar-right menu">
-						<li><a href="">HOME<hr></a></li>
-						<li><a href="">ABOUT<hr></a></li>
-						<li><a href="">SERVICES<hr></a></li>
-						<li><a href="">PORFOLIO<hr></a></li>
-						<li><a href="">TESTIMONIALS<hr></a></li>
-						<li><a href="">CONTACT<hr></a></li>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">HOME</a><div class="separator"></div></li>
+						<li><a href="#about">ABOUT</a><div class="separator"></div></li>
+						<li><a href="#service">SERVICES</a><div class="separator"></div></li>
+						<li><a href="#portfolio">PORTFOLIO</a><div class="separator"></div></li>
+						<li><a href="#testimonials">TESTIMONIALS</a><div class="separator"></div></li>
+						<li><a href="#contact">CONTACT</a><div class="separator"></div></li>
 					</ul>
 				</div>
 			</nav>
@@ -51,39 +54,42 @@
 	</div>
 
 <!--About-->
-	<section class="container">
-		<figure class="col-md-7">
-			<img src="images/spirit8-release_03.png" class="img-responsive" width="510px" height="auto" alt ="about">
-		</figure>
-		<article class="col-md-5">
-			<p>ABOUT US</p>
-			<h1>Some words about us</h1><hr>
-			<h4>We love building and rebuilding brands through our  specific skills. Using colour, fonts, and illustration, we brand companies in a way they will never forget.</h4>
-			<ul class="fa-ul">
-				<li>
-					<i class="fa-li fa fa-dot-circle-o"></i>
-					Mission<span>- We deliver uniqueness and quality</span>
-				</li>
-				<li>
-					<i class="fa-li fa fa-dot-circle-o"></i>
-					Skills <span>- Delivering fast and excellent results</span>
-				</li>
-				<li>
-					<i class="fa-li fa fa-dot-circle-o"></i>
-					Clients - <span>Satisfied clients thanks to our experience</span>
-				</li>
-			</ul>
-			<button><span class="glyphicon glyphicon-briefcase"></span> BROWSE OUR WORK</button>
+		<section class="container" id="about">
+			<figure class="col-md-7">
+				<img src="images/index_about.png" class="img-responsive" width="510px" height="auto" alt ="about">
+			</figure>
+			<article class="col-md-5 text-left">
+				<p id="about-us">ABOUT US</p>
+				<h1>Some words about us</h1>
+				<div class="separator"></div>
+				<h4>We love building and rebuilding brands through our  specific skills. Using colour, fonts, and illustration, we brand companies in a way they will never forget.</h4>
+				<ul class="fa-ul">
+					<li>
+						<i class="fa-li fa fa-dot-circle-o"></i>
+						Mission<span> - We deliver uniqueness and quality</span>
+					</li>
+					<li>
+						<i class="fa-li fa fa-dot-circle-o"></i>
+						Skills<span> - Delivering fast and excellent results</span>
+					</li>
+					<li>
+						<i class="fa-li fa fa-dot-circle-o"></i>
+						Clients<span> - Satisfied clients thanks to our experience</span>
+					</li>
+				</ul>
+				<button><span class="glyphicon glyphicon-briefcase"></span> BROWSE OUR WORK</button>
 
-		</article>
-	</section>
+			</article>
+		</section>
 <!--Team-->
 	
-		<section class="team">
+		<section class="blackCarousel text-center">
 			<h>MEET <span>OUR TEAM</span></h>
-			<hr width="100px">
-			<hr width="60px">
 
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
 			<div class="container">
 				<div id="teamCarousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -120,7 +126,7 @@
 								<figure class="col-md-3">
 									<img src="" class="img-circle" width="125" height="125" alt="team">
 									<figcaption>
-										<h4>Jet Li I</h4>
+										<h4>Jet Li</h4>
 										<h5>I need more money</h5>
 										<p>Do not seek to change what has come before. Seek to create that which has not.</p>
 									</figcaption>
@@ -154,7 +160,7 @@
 								<figure class="col-md-3">
 									<img src="" class="img-circle" width="125" height="125" alt="team">
 									<figcaption>
-										<h4>Jet Li I</h4>
+										<h4>Jet Li</h4>
 										<h5>I need more money</h5>
 										<p>Do not seek to change what has come before. Seek to create that which has not.</p>
 									</figcaption>
@@ -188,7 +194,7 @@
 								<figure class="col-md-3">
 									<img src="" class="img-circle" width="125" height="125" alt="team">
 									<figcaption>
-										<h4>Jet Li I</h4>
+										<h4>Jet Li</h4>
 										<h5>I need more money</h5>
 										<p>Do not seek to change what has come before. Seek to create that which has not.</p>
 									</figcaption>
@@ -201,10 +207,14 @@
 		</section>
 
 <!--Services-->
-		<section class="container services">
+		<section class="container" id="services">
 			<h>TAKE A LOOK AT <span>OUR SERVICES</span></h>
-			<hr width="100px">
-			<hr width="60px">
+
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
+
 			<p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 			<div class="row">
 				<article class="col-md-3">
@@ -241,11 +251,15 @@
 				</article>
 			</div>
 		</section>
+
 <!--Clients-->
-		<section class="team">
+		<section class="blackCarousel">
 			<h>SOME OF <span>OUR CLIENTS</span></h>
-			<hr width="100px">
-			<hr width="60px">
+			
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
 
 			<div class="container">
 				<div id="teamCarousel" class="carousel slide" data-ride="carousel">
@@ -305,28 +319,108 @@
 		</section>
 
 <!--Portfolio-->
-		<section class="portofolio">
+		<section class="container" id="portfolio">
 			<h>TAKE A LOOK AT <span>OUR WORK</span></h>
-			<hr width="100px">
-			<hr width="60px">
+
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
 			<p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 
-			
+			<div class="row portfolio-nav">
+				<div class="col-md-6 text-left">FILTER BY TYPE</div>
+
+				<div class="iso-nav">
+					<ul class="col-md-6 text-right list-inline filter">
+						<li class="active" data-filter="*">All</li>
+						<li data-filter=".web">Web Design</li>
+						<li data-filter=".mobile">Mobile Design</li>
+						<li data-filter=".photography">Photography</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="grid">
+				<figure class="item photography">
+					<img src="images/index_photography.jpg" alt="">
+					<figcaption class="text=center">
+						<h4>TREND AND FASHION</h4>
+						<span>Website Design</span>
+					</figuration>
+				</figure>
+				<figure class="item photography">
+					<img src="images/index_photography.jpg" alt="">
+				</figure>
+				<figure class="item photography">
+					<img src="images/index_photography.jpg" alt="">
+				</figure>
+				<figure class="item photography">
+					<img src="images/index_photography.jpg" alt="">
+				</figure>
+				<figure class="item mobile">
+					<img src="images/index_mobile.png" alt="">
+				</figure>
+				<figure class="item mobile">
+					<img src="images/index_mobile.png" alt="">
+				</figure>
+				<figure class="item mobile">
+					<img src="images/index_mobile.png" alt="">
+				</figure>
+				<figure class="item mobile">
+					<img src="images/index_mobile.png" alt="">
+				</figure>
+				<figure class="item web">
+					<img src="images/index_web.jpg" alt="">
+				</figure>
+				<figure class="item web">
+					<img src="images/index_web.jpg" alt="">
+				</figure>
+				<figure class="item web">
+					<img src="images/index_web.jpg" alt="">
+				</figure>
+				<figure class="item web">
+					<img src="images/index_web.jpg" alt="">
+				</figure>
+
+
+			</div>
+
+			<script type="text/javascript">
+				$('.grid').isotope({
+					itemSelector:'.item',
+					layoutM0de: 'fitRows'
+				});
+				//Isotope click function
+
+				$('.iso-nav ul li').click(function(){
+					$('.iso-nav ul li').removeClass('active');
+					$(this).addClass('active');
+
+					var selector = $(this).attr('data-filter');
+					$('.grid').isotope({
+						filter:selector
+					});
+					return false;
+				});
+			</script>
 		</section>
 
 <!--Testimonials-->
 
-	<section class="team">
+	<section class="container-fluid blackCarousel" id="testimonials">
 			<h>OUR CLIENTS' <span>TESTIMONIALS</span></h>
-			<hr width="100px">
-			<hr width="60px">
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
 
-			<div class="container testimonials">
-				<div id="teamCarousel" class="carousel slide" data-ride="carousel">
+			<div class="container">
+				<div id="tesCarousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
-						<li data-target="#teamCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#teamCarousel" data-slide-to="1"></li>
-						<li data-target="#teamCarousel" data-slide-to="2"></li>
+						<li data-target="#tesCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#tesCarousel" data-slide-to="1"></li>
+						<li data-target="#tesCarousel" data-slide-to="2"></li>
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
@@ -352,13 +446,15 @@
 				</div>
 			</div>
 		</section>
-	
 
 <!--Contact-->
-	<section class="contact">
+	<section id="contact">
 			<h>FEEL FREE TO <span>CONTACT US</span></h>
-			<hr width="100px">
-			<hr width="60px">
+			
+			<div class="separator-box">
+			<div class="separator"></div><br>
+			<div class="separator short-separator"></div>
+			</div>
 			<p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
 			
 			<form role="form">
@@ -369,23 +465,24 @@
 					</div>
 					<div class="form-group col-md-6">
 						<label for="name">Email Address</label><br>
-						<input class="col-md-12 type="email" id="email" required>
+						<input class="col-md-12" type="email" id="email" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="message">Message</label><br>
-					<textarea class="form-control" id="message" col="20" rows="8" required></textarea>
+					<textarea class="form-control col-md-12" id="message" rows="8" required></textarea>
 				</div>
-
-				<button><a href="">Send</a></button>
+				
+				<button class="button">SEND</button>
 			</form>
 		</section>
+
 <!--footer-->
-	<footer>
+	<footer class="row">
 		<div class="col-md-10">
-			<p>ALL RIGHTS RESERVED. COPYRIGHT © 2014 SPIRIT8</p>
+			<p>ALL RIGHTS RESERVED. COPYRIGHT &copy 2014 <strong>SPIRIT8</strong></p>
 		</div>
-				<ul class="col-md-2 social">	
+				<ul class="col-md-2 list-inline">	
 						<li><a href="">
 							<span class="fa-stack">
 					 			<i class="fa fa-circle-thin fa-stack-2x"></i>
